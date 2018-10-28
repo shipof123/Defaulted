@@ -78,9 +78,9 @@ Since C++ does not allow default values to depend on other parameters:
 ```cpp
 void f(double x, double y, double z = x + y) // imaginary C++
 {
-std::cout << "x = " << x << '\n'
-<< "y = " << y << '\n'
-<< "z = " << z << '\n';
+  std::cout << "x = " << x << '\n'
+            << "y = " << y << '\n'
+            << "z = " << z << '\n';
 }
 ```
 
@@ -91,9 +91,9 @@ struct GetDefaultAmount{ static double get(double x, double y){ return x + y; } 
 
 void f(double x, double y, DefaultedF<double, GetDefaultAmount> z)
 {
-std::cout << "x = " << x << '\n'
-<< "y = " << y << '\n'
-<< "z = " << z.get_or_default(x, y) << '\n';
+  std::cout << "x = " << x << '\n'
+            << "y = " << y << '\n'
+            << "z = " << z.get_or_default(x, y) << '\n';
 }
 ```
 
